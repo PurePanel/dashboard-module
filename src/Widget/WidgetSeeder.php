@@ -49,30 +49,6 @@ class WidgetSeeder extends Seeder
      */
     public function run()
     {
-        $this->widgets->truncate();
-        return; // @todo replace with data field type.
-        $dashboard = $this->dashboards->findBySlug('welcome');
 
-        $widget = $this->widgets
-            ->create(
-                [
-                    'en'        => [
-                        'title'       => 'Recent News',
-                        'description' => 'Recent news from http://pyrocms.com/',
-                    ],
-                    'extension' => 'anomaly.extension.xml_feed_widget',
-                    'dashboard' => $dashboard,
-                ]
-            );
-
-        $this->configuration->purge('anomaly.extension.xml_feed_widget');
-
-        $this->configuration->create(
-            [
-                'scope' => $widget->getId(),
-                'key'   => 'anomaly.extension.xml_feed_widget::url',
-                'value' => 'http://www.pyrocms.com/posts/rss.xml',
-            ]
-        );
     }
 }

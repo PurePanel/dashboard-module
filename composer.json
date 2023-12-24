@@ -1,5 +1,5 @@
 {
-    "name": "anomaly/dashboard-module",
+    "name": "purepanel/dashboard-module",
     "type": "streams-addon",
     "description": "A system dashboard and report manager.",
     "keywords": [
