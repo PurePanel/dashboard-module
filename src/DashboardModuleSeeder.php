@@ -20,6 +20,6 @@ class DashboardModuleSeeder extends Seeder
     public function run()
     {
         $this->call(DashboardSeeder::class);
-        $this->call(WidgetSeeder::class);
+        //$this->call(WidgetSeeder::class);
     }
 }
